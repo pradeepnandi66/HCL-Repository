@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'docker build pradeepnandi66/jenkins'
+                sh 'docker run pradeepnandi66/jenkins'
             }
         }
    
