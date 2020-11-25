@@ -17,5 +17,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('Docker') {
+            steps {
+                sh 'docker build ubuntu'
+            }
+        }
     }
 }
