@@ -5,8 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'docker build pradeepnandi66/jenkins'
             }
         }
+   
         stage('Test') {
             steps {
                 echo 'Testing..'
@@ -15,11 +17,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-            }
-        }
-        stage('Docker') {
-            steps {
-                sh 'docker build ubuntu'
             }
         }
     }
